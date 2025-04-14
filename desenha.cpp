@@ -346,11 +346,11 @@ void draw(const std::vector<Polygon>* polygons, const std::vector<Point>* points
     std::string command = "gnuplot " + script_filename;
     int result = system(command.c_str());
     
-    // if (result != 0) {
-    //     std::cerr << "Erro: Falha ao executar gnuplot. Verifique se ele está instalado e no PATH." << std::endl;
-    // } else {
-    //     std::cout << "Imagem gerada com sucesso: " << output_filename << std::endl;
-    // }
+    if (result != 0) {
+        std::cerr << "Erro: Falha ao executar gnuplot. Verifique se ele está instalado e no PATH." << std::endl;
+    } else {
+        std::cout << "Imagem gerada com sucesso: " << output_filename << std::endl;
+    }
     
     // Remover o arquivo de script temporário
     std::remove(script_filename.c_str());

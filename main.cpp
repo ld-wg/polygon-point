@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <limits>
 #include "geometry.h" // structs polygon e point
+#include "desenha.h"  // script gnuplot
 
 /**
  * calcula a orientacao entre 3 pontos (p, q, r)
@@ -377,6 +378,11 @@ int main() {
 
     // 3. imprimir resultados
     print_results(polygons, point_containers);
+
+    // 4. desenhar os poligonos e pontos (se houver)
+    if (!polygons.empty() || !points.empty()) {
+        draw(&polygons, &points);
+    }
 
     return 0;
 }

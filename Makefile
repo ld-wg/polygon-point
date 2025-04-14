@@ -2,9 +2,9 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra
 
 TARGET = poligonos
-SOURCES = main.cpp
+SOURCES = main.cpp desenha.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
-HEADERS = geometry.h
+HEADERS = geometry.h desenha.h
 
 all: $(TARGET)
 
