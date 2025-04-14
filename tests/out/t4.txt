@@ -1,0 +1,8 @@
+1 simples e convexo
+2 simples e convexo
+3 simples e nao convexo
+4 nao simples
+1:1 
+2:
+3:
+4:3 
